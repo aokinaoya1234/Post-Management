@@ -7,3 +7,25 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+Post.create!(
+  title: "予定#1",
+  content: "これは予定#1の内容です。",
+  start_date: Time.current + 1.days,
+  end_date: Time.current + 2.days
+)
+
+Post.create!(
+  title: "予定#2",
+  content: "これは予定#2の内容です。",
+  start_date: Time.current + 2.days,
+  end_date: Time.current + 2.days
+)
+
+Post.create!(
+  title: "予定#3",
+  content: "これは予定#3の内容です。",
+  start_date: Time.current + 3.days,
+  end_date: Time.current + 2.days
+)
