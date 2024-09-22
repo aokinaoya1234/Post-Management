@@ -44,7 +44,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.id %></td>
-        <td><%= post.title %></td>
+        <td><%= link_to post.title, post_path(post) %></td>
         <td><%= post.start_date.strftime('%Y-%m-%d %H:%M') %></td>
         <td><%= post.end_date.strftime('%Y-%m-%d %H:%M') %></td>
       </tr>
