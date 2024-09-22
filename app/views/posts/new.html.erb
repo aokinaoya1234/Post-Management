@@ -1,0 +1,23 @@
+<h1>新規投稿</h1>
+
+<%= form_with(model: @post, local: true) do |form| %>
+  <div>
+    <%= form.label :title, 'タイトル' %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :content, '内容' %>
+    <%= form.text_area :content %>
+  </div>
+  <div>
+    <%= form.label :start_date, '開始日時' %>
+    <%= form.datetime_local_field :start_date %>
+  </div>
+  <div>
+    <%= form.label :end_date, '終了日時' %>
+    <%= form.datetime_local_field :end_date %>
+  </div>
+  <%= form.submit '投稿する' %>
+<% end %>
+
+<%= link_to '戻る', posts_path %>
