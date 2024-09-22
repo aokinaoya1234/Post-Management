@@ -39,6 +39,7 @@
       <th>タイトル</th>
       <th>開始日</th>
       <th>終了日</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -48,6 +49,7 @@
         <td><%= link_to post.title, post_path(post) %></td>
         <td><%= post.start_date&.strftime('%Y-%m-%d %H:%M') %></td>
         <td><%= post.end_date&.strftime('%Y-%m-%d %H:%M') %></td>
+        <td><%= link_to '編集', edit_post_path(post) %></td>
       </tr>
     <% end %>
   </tbody>
