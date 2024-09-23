@@ -69,6 +69,17 @@
 <div class="container">
   <h1>投稿の編集</h1>
 
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "エラー") %> により、この投稿を保存できませんでした：</h2>
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <%= form_with(model: @post, local: true) do |form| %>
     <div class="form-group">
       <%= form.label :title, 'タイトル' %>

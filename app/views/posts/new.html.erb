@@ -72,7 +72,7 @@
 
   <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(@post.errors.count, "エラー") %> により、この投稿を保存できませんでした：</h2>
       <ul>
         <% @post.errors.full_messages.each do |message| %>
           <li><%= message %></li>
